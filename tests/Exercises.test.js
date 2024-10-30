@@ -80,4 +80,20 @@ describe("Exercises", () => {
 
     expect(result).toBe("word");
   });
+
+  test("should count number of specific characters", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.countSpecificCharacter("word=_");
+
+    expect(result).toBe(2);
+  });
+
+  test("alternate between capitalizing and lowercasing each letter", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.capitalizeAndLowerCase("KoRd");
+
+    expect(result).toBe("kOrD");
+  });
 });

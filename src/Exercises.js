@@ -18,4 +18,21 @@ export default class Exercises {
   removeWhiteSpace(anotherRandomWord) {
     return anotherRandomWord.replaceAll(" ", "");
   }
+
+  countSpecificCharacter(word){
+    return word.match(/[=_]/gi).length
+  }
+
+  capitalizeAndLowerCase(word){    
+    let newWord =''
+    
+     for (let i = 0; i < word.length; i++) {
+      if (word[i] === word[i].toUpperCase()) {
+        newWord += word[i].toLowerCase();
+      } else {
+        newWord += word[i].toUpperCase();
+      }
+    }
+    return newWord
+  }
 }

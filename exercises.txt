@@ -12,13 +12,13 @@ Write a function to check if a word is a palindrome. X
 Count Vowels
 Write a function that counts the number of vowels in a string. X
 
-Remove Whitespace
+Remove Whitespace X
 Create a function that removes all whitespace from a string.
 
-Count Specific Character (-/_=)
+Count Specific Character (-/_=) x
 Write a function that counts the occurrences of a specified character in a string.
 
-Alternate Capitalization
+Alternate Capitalization X
 Write a function that alternates between capitalizing and lowercasing each letter in a string.
 
 Replace Vowels with Numbers
