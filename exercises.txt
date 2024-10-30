@@ -1,0 +1,152 @@
+Implement those functions using TDD:
+
+Capitalize First Letter
+Write a function that capitalizes the first letter of a given word. X
+
+Reverse String
+Create a function to reverse a given string. X
+
+Check Palindrome (madam)
+Write a function to check if a word is a palindrome. X
+
+Count Vowels
+Write a function that counts the number of vowels in a string. X
+
+Remove Whitespace
+Create a function that removes all whitespace from a string.
+
+Count Specific Character (-/_=)
+Write a function that counts the occurrences of a specified character in a string.
+
+Alternate Capitalization
+Write a function that alternates between capitalizing and lowercasing each letter in a string.
+
+Replace Vowels with Numbers
+Create a function that replaces vowels in a string with numbers (e.g., a=1, e=2, etc.).
+
+Extract Initials
+Write a function that returns the initials of a given name.
+
+Check Anagram (spar, rasp)
+Write a function that checks if two words are anagrams of each other.
+
+Title Case a Sentence
+Create a function that capitalizes the first letter of each word in a sentence.
+
+Remove Duplicates
+Write a function that removes duplicate letters from a string.
+
+Truncate String
+Create a function that truncates a string to a specified length and adds "..." at the end if truncated.
+
+Longest Word in Sentence
+Write a function that finds the longest word in a sentence.
+
+Count Words
+Create a function that counts the number of words in a sentence.
+
+Remove Non-Alphabetic Characters
+Write a function that removes all non-alphabetic characters from a string.
+
+Convert CamelCase to Snake Case
+Write a function that converts a camelCase string to snake_case.
+
+Find Unique Characters
+Create a function that finds all unique characters in a string.
+
+Check for Substring
+Write a function that checks if a given string contains a specific substring.
+
+Replace Substring
+Create a function that replaces all occurrences of a substring in a string with another substring.
+
+Repeat String
+Write a function that repeats a given string a specified number of times.
+
+Uppercase Every Other Letter
+Create a function that converts every other letter in a string to uppercase.
+
+Mask Credit Card Number
+Write a function that hides all but the last four characters of a credit card number with asterisks.
+
+Check for Only Alphabets
+Write a function that checks if a string contains only alphabetic characters.
+
+Sort Letters Alphabetically
+Create a function that sorts the letters in a string in alphabetical order.
+
+Logical and Array Exercises
+Check Even or Odd
+Write a function that checks if a number is even or odd.
+
+Sum of Array
+Write a function that calculates the sum of numbers in an array.
+
+Find Largest Number
+Create a function that finds the largest number in an array.
+
+Find Smallest Number
+Write a function that finds the smallest number in an array.
+
+Remove Duplicates from Array
+Write a function that removes duplicate values from an array.
+
+Find Common Elements
+Create a function that finds common elements in two arrays.
+
+Array Intersection
+Write a function that returns the intersection of two arrays (common elements only).
+
+Check if Array is Sorted
+Create a function that checks if an array is sorted in ascending order.
+
+Calculate Average
+Write a function that calculates the average of numbers in an array.
+
+Count Occurrences in Array
+Write a function that counts how many times a specific number appears in an array.
+
+Find Index of Element
+Create a function that finds the index of a specified element in an array.
+
+Remove Falsy Values
+Write a function that removes all falsy values (e.g., false, null, 0, "") from an array.
+
+Filter Even Numbers
+Write a function that returns only even numbers from an array.
+
+Reverse Array
+Create a function that reverses the order of elements in an array.
+
+Count Positive Numbers
+Write a function that counts how many numbers in an array are positive.
+
+Find Max Product of Two Numbers
+Write a function that finds the maximum product of any two numbers in an array.
+
+Check if Array Contains Element
+Write a function that checks if an array contains a specific element.
+
+Find Missing Number in Sequence
+Create a function that finds the missing number in an ordered sequence (e.g., [1, 2, 4] returns 3).
+
+Square Each Number in Array
+Write a function that returns a new array with each number in the original array squared.
+
+Calculate Factorial
+Write a function that calculates the factorial of a number.
+
+Convert Array to String
+Create a function that converts an array of strings into a single string, separated by commas.
+
+Find Numbers Divisible by X
+Write a function that returns an array of numbers divisible by a given number from the original array.
+
+Generate Array of Even Numbers
+Create a function that generates an array of even numbers up to a given limit.
+
+Check if All Elements are Positive
+Write a function that checks if all numbers in an array are positive.
+
+Find First Unique Element
+Write a function that finds the first unique element in an array (an element that appears only once).
