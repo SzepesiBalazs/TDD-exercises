@@ -1,54 +1,54 @@
 Implement those functions using TDD:
 
-Capitalize First Letter
+Capitalize First Letter X1
 Write a function that capitalizes the first letter of a given word. X
 
-Reverse String
+Reverse String X2
 Create a function to reverse a given string. X
 
-Check Palindrome (madam)
+Check Palindrome (madam) X3
 Write a function to check if a word is a palindrome. X
 
-Count Vowels
+Count Vowels X4
 Write a function that counts the number of vowels in a string. X
 
-Remove Whitespace X
+Remove Whitespace X5
 Create a function that removes all whitespace from a string.
 
-Count Specific Character (-/_=) x
+Count Specific Character (-/_=) X6
 Write a function that counts the occurrences of a specified character in a string.
 
-Alternate Capitalization X
+Alternate Capitalization X7
 Write a function that alternates between capitalizing and lowercasing each letter in a string.
 
-Replace Vowels with Numbers
+Replace Vowels with Numbers X8
 Create a function that replaces vowels in a string with numbers (e.g., a=1, e=2, etc.).
 
-Extract Initials
+Extract Initials X9
 Write a function that returns the initials of a given name.
 
-Check Anagram (spar, rasp)
+Check Anagram (spar, rasp) X10
 Write a function that checks if two words are anagrams of each other.
 
-Title Case a Sentence
+Title Case a Sentence X11
 Create a function that capitalizes the first letter of each word in a sentence.
 
-Remove Duplicates
-Write a function that removes duplicate letters from a string.
+Remove Duplicates X12
+Write a function that removes duplicate letters from a string.   
 
-Truncate String
+Truncate String X13
 Create a function that truncates a string to a specified length and adds "..." at the end if truncated.
 
-Longest Word in Sentence
+Longest Word in Sentence X14
 Write a function that finds the longest word in a sentence.
 
-Count Words
+Count Words X15
 Create a function that counts the number of words in a sentence.
 
-Remove Non-Alphabetic Characters
+Remove Non-Alphabetic Characters X16
 Write a function that removes all non-alphabetic characters from a string.
 
-Convert CamelCase to Snake Case
+Convert CamelCase to Snake Case X17
 Write a function that converts a camelCase string to snake_case.
 
 Find Unique Characters
@@ -71,6 +71,9 @@ Write a function that hides all but the last four characters of a credit card nu
 
 Check for Only Alphabets
 Write a function that checks if a string contains only alphabetic characters.
+
+
+
 
 Sort Letters Alphabetically
 Create a function that sorts the letters in a string in alphabetical order.

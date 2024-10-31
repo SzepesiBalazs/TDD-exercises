@@ -19,20 +19,159 @@ export default class Exercises {
     return anotherRandomWord.replaceAll(" ", "");
   }
 
-  countSpecificCharacter(word){
-    return word.match(/[=_]/gi).length
+  countSpecificCharacter(word) {
+    return word.match(/[=_]/gi).length;
   }
 
-  capitalizeAndLowerCase(word){    
-    let newWord =''
-    
-     for (let i = 0; i < word.length; i++) {
+  capitalizeAndLowerCase(word) {
+    let newWord = "";
+
+    for (let i = 0; i < word.length; i++) {
       if (word[i] === word[i].toUpperCase()) {
         newWord += word[i].toLowerCase();
       } else {
         newWord += word[i].toUpperCase();
       }
     }
-    return newWord
+    return newWord;
+  }
+
+  vowelsToNumbers(word) {
+    const vowelToNumberMap = {
+      a: "1",
+      e: "2",
+      i: "3",
+      o: "4",
+      u: "5",
+      A: "1",
+      E: "2",
+      I: "3",
+      O: "4",
+      U: "5",
+    };
+
+    return word
+      .split("")
+      .map((char) => vowelToNumberMap[char] || char)
+      .join("");
+  }
+
+  returnInitials(name) {
+    return name
+      .split(" ")
+      .map((initial) => initial.charAt(0).toUpperCase())
+      .join(" ");
+  }
+
+  isAnagram(word1, word2) {
+    const cleanWord1 = word1.replace(/[^a-z0-9]/gi, "").toLowerCase();
+    const cleanWord2 = word2.replace(/[^a-z0-9]/gi, "").toLowerCase();
+
+    if (cleanWord1.length !== cleanWord2.length) {
+      return false;
+    }
+
+    const sortedWord1 = cleanWord1.split("").sort().join("");
+    const sortedWord2 = cleanWord2.split("").sort().join("");
+
+    return sortedWord1 === sortedWord2;
+  }
+
+  titleCaseSentence(sentence) {
+    return sentence
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
+
+  removeDuplicates(word) {
+    const result = [];
+    const seen = new Set();
+
+    for (const char of word) {
+      if (!seen.has(char)) {
+        seen.add(char);
+        result.push(char);
+      }
+    }
+
+    return result.join("");
+  }
+
+  findLongestWord(sentence) {
+    const words = sentence.split(" ");
+    let longestWord = "";
+
+    for (const word of words) {
+      if (word.length > longestWord.length) {
+        longestWord = word;
+      }
+    }
+
+    return longestWord;
+  }
+
+  countWords(sentence) {
+    const words = sentence.trim().split(/\s+/);
+    return words.length > 0 && words[0] !== "" ? words.length : 0;
+  }
+
+  removeNonAlphabetic(word) {
+    return word.replace(/[^a-zA-Z]/g, "");
+  }
+
+  camelToSnake(word) {
+    return word.replace(/([a-z])([A-Z])/g, "$1_$2").toLowerCase();
+  }
+
+  findUniqueCharacters(word) {
+    const uniqueChars = new Set(word);
+
+    return Array.from(uniqueChars).join("");
+  }
+
+  containsSubstring(str, substring) {
+    return str.includes(substring);
+  }
+
+  replaceAll(originalString, searchSubstring, newSubstring) {
+    const regex = new RegExp(searchSubstring, "g");
+
+    return originalString.replace(regex, newSubstring);
+  }
+
+  repeatString(str, times) {
+    if (times < 0) {
+      throw new RangeError("Number of repetitions must be non-negative");
+    }
+    return str.repeat(times);
+  }
+
+  convertEveryOtherToUppercase(letter) {
+    return letter
+      .split("")
+      .map((char, index) => {
+        return index % 2 === 1 ? char.toUpperCase() : char.toLowerCase();
+      })
+      .join("");
+  }
+
+  hideCreditCardNumber(cardNumber) {
+    const cardStr = String(cardNumber);
+
+    if (cardStr.length < 4) {
+      throw new Error("Credit card number must be at least 4 digits.");
+    }
+
+    const hiddenPart = "*".repeat(cardStr.length - 4);
+
+    const visiblePart = cardStr.slice(-4);
+
+    return hiddenPart + visiblePart;
+  }
+
+  isAlphabetic(word) {
+    const regex = /^[A-Za-z]+$/;
+    return regex.test(word);
   }
 }

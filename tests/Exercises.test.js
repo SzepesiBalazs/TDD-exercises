@@ -96,4 +96,142 @@ describe("Exercises", () => {
 
     expect(result).toBe("kOrD");
   });
+
+  test("should change vowels to numbers", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.vowelsToNumbers("aeiou");
+
+    expect(result).toBe("12345");
+  });
+
+  test("should return initial of a name", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.returnInitials("Szepesi Balazs");
+
+    expect(result).toBe("S B");
+  });
+
+  test("should check if word is an anagram", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isAnagram("Bake", "Beak");
+
+    expect(result).toBe(true);
+  });
+
+  test("should title case a sentence", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.titleCaseSentence("coding is not easy");
+
+    expect(result).toBe("Coding Is Not Easy");
+  });
+
+  test("should delete every duplicate word", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.removeDuplicates("aabbccdd");
+
+    expect(result).toBe("abcd");
+  });
+
+  test("should delete every duplicate word", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.findLongestWord("Coding is still hard");
+
+    expect(result).toBe("Coding");
+  });
+
+  test("should count words in a sentence", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.countWords("Real Madrid is the best team in the world");
+
+    expect(result).toBe(9);
+  });
+
+  test("should remove all non-alphabetic characters from a word", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.removeNonAlphabetic("word 123__");
+
+    expect(result).toBe("word");
+  });
+
+  test("should convert camelcase to snakecase", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.camelToSnake("codingIsFun");
+
+    expect(result).toBe("coding_is_fun");
+  });
+
+  test("should find all unique characters", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.findUniqueCharacters("javascript is fun");
+
+    expect(result).toBe("javscript fun");
+  });
+
+  test("should check for specific substring", () => {
+    const exercises = new Exercises();
+
+    const string ="Real Madrid"
+    const substring = "Madrid"
+    const result = exercises.containsSubstring(string, substring);
+
+    expect(result).toBe(true);
+  });
+
+  test("should replace all occourrences of a substring", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.replaceAll("Title author Title year","Title","Book");
+
+    expect(result).toBe("Book author Book year");
+  });
+
+  test("should repeat a string for a specified number of times", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.repeatString("word",4);
+
+    expect(result).toBe("wordwordwordword");
+  });
+
+  test("should convert every other letter to uppercase", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.convertEveryOtherToUppercase("javascript");
+
+    expect(result).toBe("jAvAsCrIpT");
+  });
+
+  test("should hide all but the last four characters", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.hideCreditCardNumber("123456789123456789");
+
+    expect(result).toBe("**************6789");
+  });
+
+  test("should check if only contains alphabetic characters", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isAlphabetic("word");
+
+    expect(result).toBe(true);
+  });
+
+  test("should be false if it has other than alphabetic characters", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isAlphabetic("word123");
+
+    expect(result).toBe(false);
+  });
 });
