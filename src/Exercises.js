@@ -52,7 +52,7 @@ export default class Exercises {
 
     return word
       .split("")
-      .map((char) => vowelToNumberMap[char] || char)
+      .map((char) => {return vowelToNumberMap[char] || char})
       .join("");
   }
 
@@ -64,23 +64,31 @@ export default class Exercises {
   }
 
   isAnagram(word1, word2) {
-    const cleanWord1 = word1.replace(/[^a-z0-9]/gi, "").toLowerCase();
-    const cleanWord2 = word2.replace(/[^a-z0-9]/gi, "").toLowerCase();
+    const cleanWord1 = this.cleanUpWord(word1);
+    const cleanWord2 = this.cleanUpWord(word2);
 
     if (cleanWord1.length !== cleanWord2.length) {
       return false;
     }
 
-    const sortedWord1 = cleanWord1.split("").sort().join("");
-    const sortedWord2 = cleanWord2.split("").sort().join("");
+    const sortedWord1 = this.sortWords(cleanWord1);
+    const sortedWord2 = this.sortWords(cleanWord2);
 
     return sortedWord1 === sortedWord2;
+  }
+
+  sortWords(cleanWord) {
+    return cleanWord.split("").sort().join("");
+  }
+
+  cleanUpWord(word) {
+    return word.replace(/[^a-z0-9]/gi, "").toLowerCase();
   }
 
   titleCaseSentence(sentence) {
     return sentence
       .split(" ")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .map((word) => this.capitalizeFirstLetter(word))
       .join(" ");
   }
 

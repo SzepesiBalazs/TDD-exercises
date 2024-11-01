@@ -51,29 +51,26 @@ Write a function that removes all non-alphabetic characters from a string.
 Convert CamelCase to Snake Case X17
 Write a function that converts a camelCase string to snake_case.
 
-Find Unique Characters
+Find Unique Characters X18
 Create a function that finds all unique characters in a string.
 
-Check for Substring
+Check for Substring X19
 Write a function that checks if a given string contains a specific substring.
 
-Replace Substring
+Replace Substring X20
 Create a function that replaces all occurrences of a substring in a string with another substring.
 
-Repeat String
+Repeat String X21
 Write a function that repeats a given string a specified number of times.
 
-Uppercase Every Other Letter
+Uppercase Every Other Letter X22
 Create a function that converts every other letter in a string to uppercase.
 
-Mask Credit Card Number
+Mask Credit Card Number X23
 Write a function that hides all but the last four characters of a credit card number with asterisks.
 
-Check for Only Alphabets
+Check for Only Alphabets X24
 Write a function that checks if a string contains only alphabetic characters.
-
-
-
 
 Sort Letters Alphabetically
 Create a function that sorts the letters in a string in alphabetical order.

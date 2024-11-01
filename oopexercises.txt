@@ -1,0 +1,79 @@
+1. Simple Class: Car
+Objective: Create a Car class with properties make, model, and year. Implement a method getCarInfo() that returns a string with car information.
+Test Case: Test that getCarInfo() returns the expected string for a given instance.
+
+2. Encapsulation: BankAccount
+Objective: Create a BankAccount class with a balance property and methods deposit() and withdraw(). Ensure balance cannot be set directly from outside.
+Test Case: Ensure balance cannot be accessed or modified directly. Test that deposit() and withdraw() work as expected.
+
+3. Class with Constructor and Default Values: Person
+Objective: Create a Person class with properties name and age, with default values if not provided. Add a method isAdult() that returns true if the person is 18 or older.
+Test Case: Check that isAdult() returns the correct result based on age.
+
+4. Inheritance: Animal and Dog
+Objective: Create a base Animal class with a method speak() that returns "Generic animal sound". Create a Dog class that inherits Animal and overrides speak() to return "Woof".
+Test Case: Test that Dog.speak() returns "Woof" and Animal.speak() returns "Generic animal sound".
+
+5. Polymorphism: Shape and Subclasses
+Objective: Create a base Shape class with a getArea() method that returns 0. Create Rectangle and Circle subclasses that override getArea() to calculate their respective areas.
+Test Case: Test getArea() for each subclass with appropriate parameters.
+
+6. Encapsulation with Private Methods: User
+Objective: Create a User class with private methods for password encryption. Implement setPassword() and validatePassword() methods using the private encryption.
+Test Case: Check that passwords are encrypted and validated correctly, without exposing raw values.
+
+7. Static Methods: MathHelper
+Objective: Create a MathHelper class with static methods add(), subtract(), multiply(), and divide().
+Test Case: Test each static method independently without creating an instance.
+
+8. Class with Dependencies: Cart and Product
+Objective: Create a Product class with name and price properties, and a Cart class with a method to add products and calculate the total.
+Test Case: Test adding products to the cart and calculating the total cost.
+
+9. Singleton Pattern: Logger
+Objective: Implement a Logger class as a singleton, ensuring only one instance exists. Add a method log() to output messages.
+Test Case: Test that only one instance of Logger can exist and that log() works as expected.
+
+10. Factory Pattern: VehicleFactory
+Objective: Implement a VehicleFactory class that produces Car or Bike instances based on input.
+Test Case: Test that VehicleFactory returns the correct instance type based on input.
+
+11. Observer Pattern: NewsPublisher and Subscriber
+Objective: Implement an Observer pattern where NewsPublisher has addSubscriber(), removeSubscriber(), and notifySubscribers() methods, and Subscriber instances receive news updates.
+Test Case: Test that subscribers receive updates when the publisher publishes news.
+
+12. Builder Pattern: HouseBuilder
+Objective: Implement a HouseBuilder class that builds a House with customizable properties such as rooms, floors, and color.
+Test Case: Test that HouseBuilder builds a House with the correct attributes based on input.
+
+13. Class Composition: Library and Book
+Objective: Create a Library class with methods to add, remove, and search for Book objects.
+Test Case: Test adding, removing, and searching books by title.
+
+14. Chaining Methods: Calculator
+Objective: Create a Calculator class that allows chaining of basic math operations (add, subtract, multiply, divide) and returns the final result.
+Test Case: Test chaining of multiple operations and verifying the result.
+
+15. Custom Iterator: Range
+Objective: Implement a Range class that represents a range of numbers with a custom iterator allowing for...of iteration.
+Test Case: Test that iterating over a Range instance yields the expected sequence of numbers.
+
+16. Exception Handling: Order
+Objective: Create an Order class with methods to add items and calculate total price. Throw custom errors if an item is invalid or if the total exceeds a certain amount.
+Test Case: Test that the correct errors are thrown for invalid items and exceeding totals.
+
+17. Abstract Class: Appliance
+Objective: Create an abstract Appliance class with an abstract method turnOn(). Implement WashingMachine and Microwave subclasses that implement turnOn().
+Test Case: Verify that each subclass implements turnOn() correctly and that Appliance cannot be instantiated directly.
+
+18. Method Overloading (Simulated): AreaCalculator
+Objective: Simulate method overloading in an AreaCalculator class that calculates the area for squares, rectangles, and circles based on the number and types of arguments.
+Test Case: Test that the correct area is calculated based on different argument types.
+
+19. Proxy Pattern: APIServiceProxy
+Objective: Implement an APIServiceProxy class that wraps an APIService class and controls access, e.g., by caching or limiting requests.
+Test Case: Test that APIServiceProxy calls the real service only when necessary.
+
+20. Mixin Pattern: CanDrive
+Objective: Create a CanDrive mixin with methods drive() and stop(). Use it in a Person or Robot class.
+Test Case: Test that any class using CanDrive has the expected driving behaviors.

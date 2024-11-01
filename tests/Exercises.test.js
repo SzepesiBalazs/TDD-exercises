@@ -148,7 +148,9 @@ describe("Exercises", () => {
   test("should count words in a sentence", () => {
     const exercises = new Exercises();
 
-    const result = exercises.countWords("Real Madrid is the best team in the world");
+    const result = exercises.countWords(
+      "Real Madrid is the best team in the world"
+    );
 
     expect(result).toBe(9);
   });
@@ -180,8 +182,8 @@ describe("Exercises", () => {
   test("should check for specific substring", () => {
     const exercises = new Exercises();
 
-    const string ="Real Madrid"
-    const substring = "Madrid"
+    const string = "Real Madrid";
+    const substring = "Madrid";
     const result = exercises.containsSubstring(string, substring);
 
     expect(result).toBe(true);
@@ -190,7 +192,11 @@ describe("Exercises", () => {
   test("should replace all occourrences of a substring", () => {
     const exercises = new Exercises();
 
-    const result = exercises.replaceAll("Title author Title year","Title","Book");
+    const result = exercises.replaceAll(
+      "Title author Title year",
+      "Title",
+      "Book"
+    );
 
     expect(result).toBe("Book author Book year");
   });
@@ -198,7 +204,7 @@ describe("Exercises", () => {
   test("should repeat a string for a specified number of times", () => {
     const exercises = new Exercises();
 
-    const result = exercises.repeatString("word",4);
+    const result = exercises.repeatString("word", 4);
 
     expect(result).toBe("wordwordwordword");
   });
@@ -214,9 +220,11 @@ describe("Exercises", () => {
   test("should hide all but the last four characters", () => {
     const exercises = new Exercises();
 
-    const result = exercises.hideCreditCardNumber("123456789123456789");
+    const cardNumber = "123456789123456789";
+    const result = exercises.hideCreditCardNumber(cardNumber);
 
     expect(result).toBe("**************6789");
+    expect(result.length).toBe(cardNumber.length);
   });
 
   test("should check if only contains alphabetic characters", () => {
