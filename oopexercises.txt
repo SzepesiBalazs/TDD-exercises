@@ -1,8 +1,8 @@
-1. Simple Class: Car
+1. Simple Class: Car X1
 Objective: Create a Car class with properties make, model, and year. Implement a method getCarInfo() that returns a string with car information.
 Test Case: Test that getCarInfo() returns the expected string for a given instance.
 
-2. Encapsulation: BankAccount
+2. Encapsulation: BankAccount X2
 Objective: Create a BankAccount class with a balance property and methods deposit() and withdraw(). Ensure balance cannot be set directly from outside.
 Test Case: Ensure balance cannot be accessed or modified directly. Test that deposit() and withdraw() work as expected.
 

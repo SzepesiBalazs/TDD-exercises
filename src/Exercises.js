@@ -52,7 +52,9 @@ export default class Exercises {
 
     return word
       .split("")
-      .map((char) => {return vowelToNumberMap[char] || char})
+      .map((char) => {
+        return vowelToNumberMap[char] || char;
+      })
       .join("");
   }
 
@@ -181,5 +183,210 @@ export default class Exercises {
   isAlphabetic(word) {
     const regex = /^[A-Za-z]+$/;
     return regex.test(word);
+  }
+
+  sortWordAlphabeticaly(word) {
+    return this.sortWords(word);
+  }
+
+  isEvenOrOdd(number) {
+    if (typeof number !== "number") {
+      return "Input must be a number";
+    }
+
+    return number % 2 === 0 ? "Even" : "Odd";
+  }
+
+  sumArray(arr) {
+    if (!Array.isArray(arr)) {
+      throw new Error("Input must be an array");
+    }
+
+    return arr.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+  }
+
+  findLargestNumber(arr) {
+    if (arr.length === 0) {
+      return undefined;
+    }
+
+    let largest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > largest) {
+        largest = arr[i];
+      }
+    }
+
+    return largest;
+  }
+
+  findSmallestNumber(arr) {
+    if (arr.length === 0) {
+      return undefined;
+    }
+
+    let smallest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < smallest) {
+        smallest = arr[i];
+      }
+    }
+
+    return smallest;
+  }
+
+  removeDuplicateValues(arr) {
+    const uniqueElements = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      if (!uniqueElements.includes(arr[i])) {
+        uniqueElements.push(arr[i]);
+      }
+    }
+    return uniqueElements;
+  }
+
+  findCommonElements(arr1, arr2) {
+    const set1 = new Set(arr1);
+
+    const commonElements = arr2.filter((element) => set1.has(element));
+
+    return commonElements;
+  }
+
+  arrayIntersect(arr1, arr2) {
+    const set1 = new Set(arr1);
+
+    return arr2.filter((item) => set1.has(item));
+  }
+
+  isArraySorted(arr) {
+    for (let index = 0; index < arr.length - 1; index++) {
+      if (arr[index] > arr[index + 1]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  calculateAverage(numbers) {
+    if (numbers.length === 0) return 0;
+
+    const sum = numbers.reduce((accumulate, num) => accumulate + num, 0);
+    return sum / numbers.length;
+  }
+
+  countOccurrences(arr, number) {
+    return arr.reduce((count, current) => {
+      return current === number ? count + 1 : count;
+    }, 0);
+  }
+
+  findIndex(arr, element) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === element) {
+        return i;
+      }
+    }
+    return;
+  }
+
+  removeFalsyValues(arr) {
+    return arr.filter(Boolean);
+  }
+
+  getEvenNumbers(arr) {
+    return arr.filter((num) => num % 2 === 0);
+  }
+
+  reverseArray(arr) {
+    return arr.reverse();
+  }
+
+  countPositiveNumbers(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 0) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  maxProduct(nums) {
+    nums.sort((a, b) => a - b);
+
+    const n = nums.length;
+    const maxProduct1 = nums[n - 1] * nums[n - 2];
+    const maxProduct2 = nums[0] * nums[1];
+
+    return Math.max(maxProduct1, maxProduct2);
+  }
+
+  containsElement(arr, element) {
+    return arr.includes(element);
+  }
+
+  findMissingNumber(arr) {
+    const n = arr.length + 1;
+    const expectedSum = ((arr[0] + arr[arr.length - 1]) * n) / 2;
+    const actualSum = arr.reduce((sum, num) => sum + num, 0);
+    return expectedSum - actualSum;
+  }
+
+  squareNumbers(arr) {
+    return arr.map((num) => num * num);
+  }
+
+  factorial(n) {
+    if (n < 0 || !Number.isInteger(n)) {
+      return "Input must be a non-negative integer.";
+    }
+    if (n === 0 || n === 1) {
+      return 1;
+    }
+    return n * this.factorial(n - 1);
+  }
+
+  arrayToString(arr) {
+    return arr.join(", ");
+  }
+
+  getDivisibleNumbers(arr, divisor) {
+    return arr.filter((num) => num % divisor === 0);
+  }
+
+  generateEvenNumbers(limit) {
+    const evenNumbers = [];
+
+    for (let i = 2; i <= limit; i += 2) {
+      evenNumbers.push(i);
+    }
+
+    return evenNumbers;
+  }
+
+  areAllPositive(arr) {
+    return arr.every((num) => num > 0);
+  }
+
+  findFirstUnique(arr) {
+    const frequencyMap = new Map();
+
+    for (const num of arr) {
+      frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+    }
+
+    for (const num of arr) {
+      if (frequencyMap.get(num) === 1) {
+        return num;
+      }
+    }
+    return null;
   }
 }

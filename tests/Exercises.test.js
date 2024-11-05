@@ -242,4 +242,255 @@ describe("Exercises", () => {
 
     expect(result).toBe(false);
   });
+
+  test("should sort words alphabeticaly", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.sortWordAlphabeticaly("cba");
+
+    expect(result).toBe("abc");
+  });
+
+  test("should check if number is even", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isEvenOrOdd(2);
+
+    expect(result).toBe("Even");
+  });
+
+  test("should check if number is odd", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isEvenOrOdd(1);
+
+    expect(result).toBe("Odd");
+  });
+
+  test("should calculate the sum of numbers in an array", () => {
+    const exercises = new Exercises();
+    const numbers = [1, 2, 3];
+    const result = exercises.sumArray(numbers);
+
+    expect(result).toBe(6);
+  });
+
+  test("should find the largest number in an array", () => {
+    const exercises = new Exercises();
+    const numbers = [1, 2, 3];
+    const result = exercises.findLargestNumber(numbers);
+
+    expect(result).toBe(3);
+  });
+
+  test("should find the smallest number in an array", () => {
+    const exercises = new Exercises();
+    const numbers = [1, 2, 3];
+    const result = exercises.findSmallestNumber(numbers);
+
+    expect(result).toBe(1);
+  });
+
+  test("should remove all duplicate numbers from values", () => {
+    const exercises = new Exercises();
+    const numbers = [1, 2, 3, 3, 4, 5, 5, 6];
+    const result = exercises.removeDuplicateValues(numbers);
+
+    expect(result).toEqual([1, 2, 3, 4, 5, 6]);
+  });
+
+  test("should find common elemnents in two arrays", () => {
+    const exercises = new Exercises();
+    const array1 = [1, 2, 3, 4, 5];
+    const array2 = [4, 5, 6, 7, 8];
+    const result = exercises.findCommonElements(array1, array2);
+
+    expect(result).toEqual([4, 5]);
+  });
+
+  test("should find intersect in two arrays", () => {
+    const exercises = new Exercises();
+    const array1 = [1, 2, 3, 4, 5];
+    const array2 = [4, 5, 6, 7, 8];
+    const result = exercises.arrayIntersect(array1, array2);
+
+    expect(result).toEqual([4, 5]);
+  });
+
+  test("should return true if array is sorted", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isArraySorted([1, 2, 3, 4]);
+
+    expect(result).toBe(true);
+  });
+
+  test("should return false if array is not sorted", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.isArraySorted([1, 3, 2, 4]);
+
+    expect(result).toBe(false);
+  });
+
+  test("should calculate the average of the array", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.calculateAverage([1, 2, 3, 4, 5]);
+
+    expect(result).toBe(3);
+  });
+
+  test("should count occurrences in array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3, 1, 1];
+    const result = exercises.countOccurrences(numbers, 1);
+
+    expect(result).toBe(3);
+  });
+
+  test("should find index of the element", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3, 4, 5];
+    const result = exercises.findIndex(numbers, 3);
+
+    expect(result).toBe(2);
+  });
+
+  test("should remove falsy values from array", () => {
+    const exercises = new Exercises();
+
+    const arrayWithFalsyValues = [false, 1, null, 2, undefined];
+    const result = exercises.removeFalsyValues(arrayWithFalsyValues);
+
+    expect(result).toEqual([1, 2]);
+  });
+
+  test("should filter even numbers in array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3, 4, 5, 6];
+    const result = exercises.getEvenNumbers(numbers);
+
+    expect(result).toEqual([2, 4, 6]);
+  });
+
+  test("should reverse elements of array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3, 4, 5, 6];
+    const result = exercises.reverseArray(numbers);
+
+    expect(result).toEqual([6, 5, 4, 3, 2, 1]);
+  });
+
+  test("should count the positive numbers only in an array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3, 4, 5, 6, -1, -2];
+    const result = exercises.countPositiveNumbers(numbers);
+
+    expect(result).toBe(6);
+  });
+
+  test("should find the max product of two numbers", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 5, 10];
+    const result = exercises.maxProduct(numbers);
+
+    expect(result).toBe(50);
+  });
+
+  test("should find specific element in array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3, 4, 5];
+    const result = exercises.containsElement(numbers, 3);
+
+    expect(result).toBe(true);
+  });
+
+  test("should find the missing number for the sequence", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 4, 5];
+    const result = exercises.findMissingNumber(numbers);
+
+    expect(result).toBe(3);
+  });
+
+  test("should return the square of each number in array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1, 2, 3];
+    const result = exercises.squareNumbers(numbers);
+
+    expect(result).toEqual([1, 4, 9]);
+  });
+
+  test("should return the factorial of a number", () => {
+    const exercises = new Exercises();
+
+    const result = exercises.factorial(5);
+
+    expect(result).toBe(120);
+  });
+
+  test("should return an array to a string", () => {
+    const exercises = new Exercises();
+
+    const strings = ["word", "newWord"];
+    const result = exercises.arrayToString(strings);
+
+    expect(result).toBe("word, newWord");
+  });
+
+  test("should return an array of divisible numbers from an array", () => {
+    const exercises = new Exercises();
+
+    const originalArray = [1, 2, 4, 6, 8];
+    const divisor = 2;
+    const result = exercises.getDivisibleNumbers(originalArray, divisor);
+
+    expect(result).toEqual([2, 4, 6, 8]);
+  });
+
+  test("should generate even numbers until it reaches the 10 limit", () => {
+    const exercises = new Exercises();
+
+    const limit = 10;
+    const result = exercises.generateEvenNumbers(limit);
+
+    expect(result).toEqual([2, 4, 6, 8, 10]);
+  });
+
+  test("should return true if all numbers are positive in an array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1,2,3,4,5]
+    const result = exercises.areAllPositive(numbers);
+
+    expect(result).toBe(true);
+  });
+
+  test("should return false if not all numbers are positive in an array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [-1,1,2,3,4,5]
+    const result = exercises.areAllPositive(numbers);
+
+    expect(result).toBe(false);
+  });
+
+  test("should find the first unique element in an array", () => {
+    const exercises = new Exercises();
+
+    const numbers = [1,1,2,3,3,4,4,5,5]
+    const result = exercises.findFirstUnique(numbers);
+
+    expect(result).toBe(2);
+  });
 });

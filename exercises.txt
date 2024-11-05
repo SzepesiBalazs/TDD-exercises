@@ -72,81 +72,84 @@ Write a function that hides all but the last four characters of a credit card nu
 Check for Only Alphabets X24
 Write a function that checks if a string contains only alphabetic characters.
 
-Sort Letters Alphabetically
+Sort Letters Alphabetically X25
 Create a function that sorts the letters in a string in alphabetical order.
 
-Logical and Array Exercises
-Check Even or Odd
+
+
+Logical and Array Exercises 
+
+Check Even or Odd X26
 Write a function that checks if a number is even or odd.
 
-Sum of Array
+Sum of Array X27
 Write a function that calculates the sum of numbers in an array.
 
-Find Largest Number
+Find Largest Number X29
 Create a function that finds the largest number in an array.
 
-Find Smallest Number
+Find Smallest Number X30    
 Write a function that finds the smallest number in an array.
 
-Remove Duplicates from Array
+Remove Duplicates from Array x31
 Write a function that removes duplicate values from an array.
 
-Find Common Elements
+Find Common Elements X32
 Create a function that finds common elements in two arrays.
 
-Array Intersection
+Array Intersection X33
 Write a function that returns the intersection of two arrays (common elements only).
 
-Check if Array is Sorted
+Check if Array is Sorted X34
 Create a function that checks if an array is sorted in ascending order.
 
-Calculate Average
+Calculate Average X35
 Write a function that calculates the average of numbers in an array.
 
-Count Occurrences in Array
+Count Occurrences in Array X36
 Write a function that counts how many times a specific number appears in an array.
 
-Find Index of Element
+Find Index of Element X37
 Create a function that finds the index of a specified element in an array.
 
-Remove Falsy Values
+Remove Falsy Values  X38
 Write a function that removes all falsy values (e.g., false, null, 0, "") from an array.
 
-Filter Even Numbers
+Filter Even Numbers X39
 Write a function that returns only even numbers from an array.
 
-Reverse Array
+Reverse Array X40
 Create a function that reverses the order of elements in an array.
 
-Count Positive Numbers
+Count Positive Numbers X41
 Write a function that counts how many numbers in an array are positive.
 
-Find Max Product of Two Numbers
+Find Max Product of Two Numbers X42
 Write a function that finds the maximum product of any two numbers in an array.
 
-Check if Array Contains Element
+Check if Array Contains Element X43
 Write a function that checks if an array contains a specific element.
 
-Find Missing Number in Sequence
+Find Missing Number in Sequence X44
 Create a function that finds the missing number in an ordered sequence (e.g., [1, 2, 4] returns 3).
 
-Square Each Number in Array
+Square Each Number in Array X45
 Write a function that returns a new array with each number in the original array squared.
 
-Calculate Factorial
+Calculate Factorial X46
 Write a function that calculates the factorial of a number.
 
-Convert Array to String
+Convert Array to String X47
 Create a function that converts an array of strings into a single string, separated by commas.
 
-Find Numbers Divisible by X
+Find Numbers Divisible by X X48
 Write a function that returns an array of numbers divisible by a given number from the original array.
 
-Generate Array of Even Numbers
+Generate Array of Even Numbers X49
 Create a function that generates an array of even numbers up to a given limit.
 
-Check if All Elements are Positive
+Check if All Elements are Positive X50
 Write a function that checks if all numbers in an array are positive.
 
-Find First Unique Element
+Find First Unique Element X51
 Write a function that finds the first unique element in an array (an element that appears only once).

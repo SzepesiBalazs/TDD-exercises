@@ -1,5 +1,6 @@
 import Car from "../src/Car";
 import BankAccount from "../src/BankAccount";
+import Person from "../src/Person";
 
 describe("OopExercises", () => {
   test("should return car info", () => {
@@ -37,5 +38,19 @@ describe("OopExercises", () => {
     bankAccount.deposit(1); //11
 
     expect(startingBalance + 1).toBe(bankAccount.getBalance());
+  });
+
+  test("should return true if age is over than 18", () => {
+    const person = new Person("Balázs", 20)
+    const adult = person.isAdult()
+
+    expect(adult).toBe(true);
+  });
+
+  test("should return false if age is less than 18", () => {
+    const person = new Person("Larina", 17)
+    const adult = person.isAdult()
+
+    expect(adult).toBe(false);
   });
 });
