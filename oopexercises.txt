@@ -6,39 +6,39 @@ Test Case: Test that getCarInfo() returns the expected string for a given instan
 Objective: Create a BankAccount class with a balance property and methods deposit() and withdraw(). Ensure balance cannot be set directly from outside.
 Test Case: Ensure balance cannot be accessed or modified directly. Test that deposit() and withdraw() work as expected.
 
-3. Class with Constructor and Default Values: Person
+3. Class with Constructor and Default Values: Person X3
 Objective: Create a Person class with properties name and age, with default values if not provided. Add a method isAdult() that returns true if the person is 18 or older.
 Test Case: Check that isAdult() returns the correct result based on age.
-
-4. Inheritance: Animal and Dog
+ 
+4. Inheritance: Animal and Dog X4
 Objective: Create a base Animal class with a method speak() that returns "Generic animal sound". Create a Dog class that inherits Animal and overrides speak() to return "Woof".
 Test Case: Test that Dog.speak() returns "Woof" and Animal.speak() returns "Generic animal sound".
 
-5. Polymorphism: Shape and Subclasses
+5. Polymorphism: Shape and Subclasses X5
 Objective: Create a base Shape class with a getArea() method that returns 0. Create Rectangle and Circle subclasses that override getArea() to calculate their respective areas.
 Test Case: Test getArea() for each subclass with appropriate parameters.
 
-6. Encapsulation with Private Methods: User
+6. Encapsulation with Private Methods: User X6
 Objective: Create a User class with private methods for password encryption. Implement setPassword() and validatePassword() methods using the private encryption.
 Test Case: Check that passwords are encrypted and validated correctly, without exposing raw values.
 
-7. Static Methods: MathHelper
+7. Static Methods: MathHelper X7
 Objective: Create a MathHelper class with static methods add(), subtract(), multiply(), and divide().
 Test Case: Test each static method independently without creating an instance.
 
-8. Class with Dependencies: Cart and Product
+8. Class with Dependencies: Cart and Product X8
 Objective: Create a Product class with name and price properties, and a Cart class with a method to add products and calculate the total.
 Test Case: Test adding products to the cart and calculating the total cost.
 
-9. Singleton Pattern: Logger
+9. Singleton Pattern: Logger X9
 Objective: Implement a Logger class as a singleton, ensuring only one instance exists. Add a method log() to output messages.
-Test Case: Test that only one instance of Logger can exist and that log() works as expected.
+Test Case: Test that only one instance of Logger can exist and that log() works as expected. (log() needs to be tested!!)
 
-10. Factory Pattern: VehicleFactory
+10. Factory Pattern: VehicleFactory X10
 Objective: Implement a VehicleFactory class that produces Car or Bike instances based on input.
 Test Case: Test that VehicleFactory returns the correct instance type based on input.
 
-11. Observer Pattern: NewsPublisher and Subscriber
+11. Observer Pattern: NewsPublisher and Subscriber 
 Objective: Implement an Observer pattern where NewsPublisher has addSubscriber(), removeSubscriber(), and notifySubscribers() methods, and Subscriber instances receive news updates.
 Test Case: Test that subscribers receive updates when the publisher publishes news.
 
