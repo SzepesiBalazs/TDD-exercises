@@ -164,6 +164,8 @@ describe("OopExercises", () => {
     expect(car instanceof Car).toBe(true);
   });
 
+  // hali
+
   test("should create correct vehicle instances based on input", () => {
     const bike = new Bike
 
