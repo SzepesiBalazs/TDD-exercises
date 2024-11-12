@@ -16,5 +16,5 @@ class Circle extends Shape {
   }
 }
 
-export { Circle   };
-export { Rectangle };
+export { Circle, Rectangle };
+

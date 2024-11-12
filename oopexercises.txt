@@ -38,31 +38,31 @@ Test Case: Test that only one instance of Logger can exist and that log() works 
 Objective: Implement a VehicleFactory class that produces Car or Bike instances based on input.
 Test Case: Test that VehicleFactory returns the correct instance type based on input.
 
-11. Observer Pattern: NewsPublisher and Subscriber 
+11. Observer Pattern: NewsPublisher and Subscriber X11
 Objective: Implement an Observer pattern where NewsPublisher has addSubscriber(), removeSubscriber(), and notifySubscribers() methods, and Subscriber instances receive news updates.
-Test Case: Test that subscribers receive updates when the publisher publishes news.
+Test Case: Test that subscribers receive updates when the publisher publishes news. NEED TEST!!!
 
-12. Builder Pattern: HouseBuilder
+12. Builder Pattern: HouseBuilder X12
 Objective: Implement a HouseBuilder class that builds a House with customizable properties such as rooms, floors, and color.
 Test Case: Test that HouseBuilder builds a House with the correct attributes based on input.
 
-13. Class Composition: Library and Book
+13. Class Composition: Library and Book X13
 Objective: Create a Library class with methods to add, remove, and search for Book objects.
 Test Case: Test adding, removing, and searching books by title.
 
-14. Chaining Methods: Calculator
+14. Chaining Methods: Calculator X14
 Objective: Create a Calculator class that allows chaining of basic math operations (add, subtract, multiply, divide) and returns the final result.
 Test Case: Test chaining of multiple operations and verifying the result.
 
-15. Custom Iterator: Range
+15. Custom Iterator: Range X15
 Objective: Implement a Range class that represents a range of numbers with a custom iterator allowing for...of iteration.
 Test Case: Test that iterating over a Range instance yields the expected sequence of numbers.
 
-16. Exception Handling: Order
+16. Exception Handling: Order X16
 Objective: Create an Order class with methods to add items and calculate total price. Throw custom errors if an item is invalid or if the total exceeds a certain amount.
 Test Case: Test that the correct errors are thrown for invalid items and exceeding totals.
 
-17. Abstract Class: Appliance
+17. Abstract Class: Appliance X17
 Objective: Create an abstract Appliance class with an abstract method turnOn(). Implement WashingMachine and Microwave subclasses that implement turnOn().
 Test Case: Verify that each subclass implements turnOn() correctly and that Appliance cannot be instantiated directly.
 

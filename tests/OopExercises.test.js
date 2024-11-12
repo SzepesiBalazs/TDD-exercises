@@ -3,14 +3,29 @@ import BankAccount from "../src/BankAccount";
 import Person from "../src/Person";
 import Animal from "../src/Animal";
 import { Dog } from "../src/Animal";
-import Shape from "../src/Shape";
-import { Rectangle } from "../src/Shape";
-import { Circle } from "../src/Shape";
+import Shape, { Circle, Rectangle } from "../src/Shape";
 import User from "../src/Encryption";
 import MathHelper from "../src/MathHelper";
 import Product, { Cart } from "../src/ProductCart";
 import Logger from "../src/Logger";
-import { Bike } from "../src/VehicleFactory";
+import {
+  Vehicle,
+  Car as CarFromFactory,
+  Bike,
+  createVehicle,
+} from "../src/VehicleFactory";
+import { HouseBuilder } from "../src/HouseBuilder";
+import House from "../src/HouseBuilder";
+import { Library } from "../src/Library";
+import { Book } from "../src/Library";
+import Calculator from "../src/Calculator";
+import Range from "../src/Range";
+import Order from "../src/Order";
+import { InvalidItemError } from "../src/Order";
+import { TotalExceededError } from "../src/Order";
+import { WashingMachine } from "../src/Applience";
+import { Appliance } from "../src/Applience";
+import { Microwave } from "../src/Applience";
 
 describe("OopExercises", () => {
   test("should return car info", () => {
@@ -149,26 +164,152 @@ describe("OopExercises", () => {
     expect(total).toBe(3, 2);
   });
 
-  test("should calculate total price after adding products", () => {
+  test("should make all instances of logger to be the same", () => {
     const logger1 = new Logger();
     const logger2 = new Logger();
 
     expect(logger1).toBe(logger2);
-
     expect(logger1 instanceof Logger).toBe(true);
+    expect(logger1.log()).toBe(logger2.log());
   });
 
   test("should create correct vehicle instances based on input", () => {
-    const car = new Car
+    const car = createVehicle("Car");
 
-    expect(car instanceof Car).toBe(true);
+    expect(car instanceof CarFromFactory).toBe(true);
+    expect(car.type).toBe("Car");
+    expect(car.funFunction()).toBe("Hello Car");
   });
 
-  // hali
-
   test("should create correct vehicle instances based on input", () => {
-    const bike = new Bike
+    const bike = new createVehicle("Bike");
 
     expect(bike instanceof Bike).toBe(true);
+    expect(bike.funFunction()).toBe("Hello");
   });
 });
+
+test("should create correct house instances based on input", () => {
+  const myHouse = new HouseBuilder()
+    .setRooms(4)
+    .setFloors(2)
+    .setColor("blue")
+    .build();
+
+  expect(myHouse instanceof House).toBe(true);
+
+  expect(myHouse.rooms).toBe(4);
+
+  expect(myHouse.floors).toBe(2);
+
+  expect(myHouse.color).toBe("blue");
+});
+
+test("should find book by title", () => {
+  const myLibrary = new Library();
+  const book1 = new Book("abc", "Good Author");
+  const book2 = new Book("cba", "Better Author");
+
+  myLibrary.addBook(book1);
+  myLibrary.addBook(book2);
+
+  const searchResults = myLibrary.searchBook("abc");
+
+  expect(searchResults).toEqual(["abc by Good Author"]);
+});
+
+test("should remove a book by title", () => {
+  const myLibrary = new Library();
+  const book1 = new Book("abc", "Good Author");
+  const book2 = new Book("cba", "Better Author");
+
+  myLibrary.addBook(book1);
+  myLibrary.addBook(book2);
+
+  myLibrary.removeBook("abc");
+
+  expect(myLibrary.books.length).toBe(1);
+  expect(myLibrary.books[0].title).toBe("cba");
+});
+
+test("should add a book to the library", () => {
+  const myLibrary = new Library();
+  const book1 = new Book("abc", "Good Author");
+
+  myLibrary.addBook(book1);
+
+  expect(myLibrary.books.length).toBe(1);
+  expect(myLibrary.books[0].title).toBe("abc");
+  expect(myLibrary.books[0].author).toBe("Good Author");
+});
+
+test("should perform arithmetic operations correctly with method chaining", () => {
+  const calculator = new Calculator();
+
+  const result = calculator
+    .add(10)
+    .subtract(3)
+    .multiply(4)
+    .divide(2)
+    .getResult();
+
+  expect(result).toBe(14);
+});
+
+test("should perform range correctly with the method", () => {
+  const range1 = new Range(1, 10);
+
+  const result = range1.getValues();
+
+  expect(result).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+});
+
+test("should add items and calculate their total value", () => {
+  const order = new Order(500); 
+  const result = order
+    .addItem({ name: "Laptop", price: 200 })
+    .addItem({ name: "Phone", price: 150 })
+    .addItem({ name: "Headphones", price: 100 })
+    .calculateTotal(); 
+
+  expect(result).toEqual(450);
+});
+
+test("should throw error when adding invalid item", () => {
+  const order = new Order(500);
+
+  expect(() => {
+    order.addItem({ name: "Laptop", price: -200 });
+  }).toThrowError(InvalidItemError);
+});
+
+test("should throw error when total exceeds max limit", () => {
+  const order = new Order(300);
+
+  expect(() => {
+    order.addItem({ name: "Laptop", price: 400 });
+    order.calculateTotal();
+  }).toThrowError(TotalExceededError);
+});
+
+test("should throw error when trying to instantiate the abstract Appliance class", () => {
+  expect(() => {
+    new Appliance('Generic Appliance');
+  }).toThrowError('Cannot instantiate abstract class Appliance directly.');
+});
+
+test("should call turnOn() on WashingMachine and log the correct message", () => {
+  const washingMachine = new WashingMachine('Samsung');
+  console.log = jest.fn();  
+  washingMachine.turnOn();
+  expect(console.log).toHaveBeenCalledWith('Samsung Washing Machine is now running.');
+});
+
+test("should call turnOn() on Microwave and log the correct message", () => {
+  const microwave = new Microwave('LG');
+  console.log = jest.fn(); 
+  microwave.turnOn();
+  expect(console.log).toHaveBeenCalledWith('LG Microwave is now heating.');
+});
+
+
